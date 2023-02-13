@@ -3,7 +3,7 @@ import {View, Text, SafeAreaView,
 import React, {useLayoutEffect} from 'react';
 import * as Animatable from 'react-native-animatable';
 import {useNavigation} from "@react-navigation/native";
-import {HeroImage} from "../assets";
+import {HeroImage} from "../assets/images";
 
 const HomeScreen = () => {
 
