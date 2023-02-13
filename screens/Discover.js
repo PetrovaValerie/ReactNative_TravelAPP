@@ -33,15 +33,24 @@ const Discover = () => {
 
             <View className={"flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4"}>
                 <GooglePlacesAutocomplete
+                    GooglePlacesDetailsQuery={{ fields: "geometry" }}
                     placeholder='Search'
+                    fetchDetails={true}
                     onPress={(data, details = null) => {
                         // 'details' is provided when fetchDetails = true
-                        console.log(data, details);
+                        console.log(details?.geometry?.viewport);
                     }}
                     query={{
-                        key: 'YOUR API KEY',
+                        key: 'AIzaSyCzCXqNlAkU-Jv0wQX3zXtAcV-eg8CmvFM',
                         language: 'en',
                     }}
+                    // requestUrl={{
+                    //     useOnPlatform: "all",
+                    //     url:
+                    //         'http://localhost:19006/https://maps.googleapis.com/maps/api'
+                    //
+                    //     }}
+
                 />
 
             </View>
